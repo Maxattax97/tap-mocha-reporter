@@ -1,0 +1,160 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 2,
+    "pending": 0,
+    "failures": 2,
+    "start": "2018-06-08T09:45:26.091Z",
+    "end": "2018-06-08T09:45:26.227Z",
+    "duration": 136,
+    "testsRegistered": 5,
+    "passPercent": 40,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "7da2414c-3189-456d-9e87-a0a0aa7df5e9",
+    "title": "root",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "abf621a4-8985-42cc-9f0d-03c51fe0ba11",
+        "title": "/tmp/test1.sh",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "testing a skip",
+            "fullTitle": "root /tmp/test1.sh testing a skip",
+            "duration": 0,
+            "state": "skipped",
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "",
+            "err": {},
+            "uuid": "054a5d01-4070-4280-b3ab-f2823e59626f",
+            "isHook": false,
+            "skipped": true
+          },
+          {
+            "title": "can multiply one by two",
+            "fullTitle": "root /tmp/test1.sh can multiply one by two",
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "context": "{\n  \"title\": \"diagnostic\",\n  \"value\": {\n    \"actual\": 3,\n    \"expected\": 2\n  }\n}",
+            "code": "",
+            "err": {},
+            "uuid": "e5572f66-86b1-463c-9b62-1a34e1dac7fb",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "can multiply two by two",
+            "fullTitle": "root /tmp/test1.sh can multiply two by two",
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "context": "{\n  \"title\": \"diagnostic\",\n  \"value\": {\n    \"actual\": 4,\n    \"expected\": 4\n  }\n}",
+            "code": "",
+            "err": {},
+            "uuid": "1e6529d0-a46c-4565-990a-49b1d134f9bc",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "1e6529d0-a46c-4565-990a-49b1d134f9bc"
+        ],
+        "failures": [
+          "e5572f66-86b1-463c-9b62-1a34e1dac7fb"
+        ],
+        "pending": [],
+        "skipped": [
+          "054a5d01-4070-4280-b3ab-f2823e59626f"
+        ],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false
+      },
+      {
+        "uuid": "b0eb7c2a-8c35-40d9-9346-3c28dd8b1cd9",
+        "title": "/tmp/test2.sh",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "nesting",
+            "fullTitle": "root /tmp/test2.sh nesting",
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "",
+            "err": {},
+            "uuid": "e1f6b190-1c5e-469c-bf96-c0b0978761ec",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "second",
+            "fullTitle": "root /tmp/test2.sh second",
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "",
+            "err": {},
+            "uuid": "c2f7969c-8d1f-4544-91c0-c0e783ddab4e",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "c2f7969c-8d1f-4544-91c0-c0e783ddab4e"
+        ],
+        "failures": [
+          "e1f6b190-1c5e-469c-bf96-c0b0978761ec"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true
+  },
+  "copyrightYear": 2018
+}
