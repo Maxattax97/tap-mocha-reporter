@@ -22,6 +22,10 @@ util.inherits(Formatter, Writable)
 
 var exitCode
 function Formatter (type, runnerOptions, options) {
+  // console.log(runnerOptions, options)
+  // runnerOptions = JSON.parse(runnerOptions);
+  // options = JSON.parse(options);
+ 
   if (!(this instanceof Formatter)) {
     return new Formatter(type, runnerOptions, options)
   }
@@ -57,15 +61,15 @@ function Formatter (type, runnerOptions, options) {
     return this
   }
 
+  // var runner = this.runner = new Runner(runnerOptions)
+  // var reporter = this.reporter = new reporters[type](
+    // this.runner,
+    // (options || {}).reporter || {}
+  // )
+  // Writable.call(this, runnerOptions)
   var runner = this.runner = new Runner(runnerOptions)
-  this.reporter = new reporters[type](
-    this.runner,
-    (options || {}).reporter || {}
-  )
+  var reporter = this.reporter = new _reporter(this.runner, (options || {}).reporter || {})
   Writable.call(this, runnerOptions)
-  //var runner = this.runner = new Runner(options)
-  //var reporter = this.reporter = new _reporter(this.runner, {})
-  //Writable.call(this, options)
 
   runner.on('end', function () {
     if (!runner.parser.ok)
@@ -117,8 +121,10 @@ reporter.  (Note that some reporters write to files instead of stdout.)
 
 if (require.main === module) {
   var type = process.argv[2]
+  var runnerOptions = process.argv[3]
+  var options = process.argv[4]
   if (!type)
     return usage()
 
-  process.stdin.pipe(new Formatter(type))
+  process.stdin.pipe(new Formatter(type, runnerOptions, options))
 }
