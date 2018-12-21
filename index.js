@@ -60,7 +60,7 @@ function Formatter (type, runnerOptions, options) {
   var runner = this.runner = new Runner(runnerOptions)
   this.reporter = new reporters[type](
     this.runner,
-    (options || {}).reporter || {},
+    (options || {}).reporter || {}
   )
   Writable.call(this, runnerOptions)
   //var runner = this.runner = new Runner(options)
